@@ -71,3 +71,36 @@ pub fn build_inverse_tree(start: u64, depth: usize) -> (CollatzGraph, HashMap<u6
     
     (graph, node_map)
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_build_sequence_graph() {
+        let sequence = vec![3, 10, 5, 16, 8, 4, 2, 1];
+        let (graph, node_map) = build_sequence_graph(sequence.clone());
+        
+        // Check that all numbers are in the graph
+        assert_eq!(graph.node_count(), sequence.len());
+        for &num in &sequence {
+            assert!(node_map.contains_key(&num));
+        }
+        
+        // Check that we have the correct number of edges
+        assert_eq!(graph.edge_count(), sequence.len() - 1);
+    }
+
+    #[test]
+    fn test_build_inverse_tree() {
+        let (graph, node_map) = build_inverse_tree(1, 3);
+        
+        // Should have at least the root node
+        assert!(graph.node_count() > 0);
+        assert!(node_map.contains_key(&1));
+        
+        // Check that 2 is a predecessor of 1
+        assert!(node_map.contains_key(&2));
+    }
+}
+
