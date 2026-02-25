@@ -2,6 +2,11 @@
 name = "collatz-viz"
 version = "0.1.0"
 edition = "2021"
+authors = ["Collatz Visualizer Contributors"]
+description = "A CLI tool to visualize Collatz sequences as interactive graphs"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Harrichael/Collatz-Viz"
 
 [dependencies]
 clap = { version = "4.5", features = ["derive"] }

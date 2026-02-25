@@ -7,6 +7,7 @@ use eframe::egui;
 
 #[derive(Parser)]
 #[command(name = "collatz-viz")]
+#[command(version)]
 #[command(about = "Visualize Collatz sequences as a graph", long_about = None)]
 struct Cli {
     #[command(subcommand)]
