@@ -12,4 +12,6 @@ repository = "https://github.com/Harrichael/Collatz-Viz"
 clap = { version = "4.5", features = ["derive"] }
 eframe = "0.31"
 egui = "0.31"
+num-bigint = "0.4"
+num-traits = "0.2"
 petgraph = "0.6"
