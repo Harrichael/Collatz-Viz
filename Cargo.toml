@@ -10,10 +10,12 @@ repository = "https://github.com/Harrichael/Collatz-Viz"
 
 [dependencies]
 clap = { version = "4.5", features = ["derive"] }
+crossterm = "0.28"
 eframe = "0.31"
 egui = "0.31"
 num-bigint = "0.4"
 num-traits = "0.2"
 petgraph = "0.6"
+ratatui = "0.29"
 smithay-clipboard = "=0.7.2"
 moxcms = "=0.7.10"
