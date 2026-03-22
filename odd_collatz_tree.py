@@ -109,7 +109,7 @@ def build_odd_collatz_tree(
         return OddCollatzNode(
             value=n,
             children=[],
-            has_more_children=can_have_children,
+            has_more_children=False,
         )
 
     # Odd multiple of 3: no children exist in the Collatz tree
