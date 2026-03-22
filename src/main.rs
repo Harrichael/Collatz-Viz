@@ -1,4 +1,5 @@
 mod collatz;
+mod engine;
 mod graph;
 mod gui;
 
